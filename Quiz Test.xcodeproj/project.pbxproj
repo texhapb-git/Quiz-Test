@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12054A5125C167A80016E360 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A5025C167A80016E360 /* QuestionViewController.swift */; };
 		1279110F25A3577700EE04BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279110E25A3577700EE04BB /* AppDelegate.swift */; };
 		1279111125A3577700EE04BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279111025A3577700EE04BB /* SceneDelegate.swift */; };
 		1279111325A3577700EE04BB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279111225A3577700EE04BB /* WelcomeViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12054A5025C167A80016E360 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		1279110B25A3577700EE04BB /* Quiz Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1279110E25A3577700EE04BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1279111025A3577700EE04BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12054A5325C167E00016E360 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1279111225A3577700EE04BB /* WelcomeViewController.swift */,
+				12054A5025C167A80016E360 /* QuestionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		1279110225A3577700EE04BB = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +68,12 @@
 			isa = PBXGroup;
 			children = (
 				1279110E25A3577700EE04BB /* AppDelegate.swift */,
-				1279111025A3577700EE04BB /* SceneDelegate.swift */,
-				1279111225A3577700EE04BB /* WelcomeViewController.swift */,
-				1279111425A3577700EE04BB /* Main.storyboard */,
 				1279111725A3577A00EE04BB /* Assets.xcassets */,
-				1279111925A3577A00EE04BB /* LaunchScreen.storyboard */,
 				1279111C25A3577A00EE04BB /* Info.plist */,
+				1279111925A3577A00EE04BB /* LaunchScreen.storyboard */,
+				1279111425A3577700EE04BB /* Main.storyboard */,
+				1279111025A3577700EE04BB /* SceneDelegate.swift */,
+				12054A5325C167E00016E360 /* View Controllers */,
 			);
 			path = "Quiz Test";
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			files = (
 				1279111325A3577700EE04BB /* WelcomeViewController.swift in Sources */,
 				1279110F25A3577700EE04BB /* AppDelegate.swift in Sources */,
+				12054A5125C167A80016E360 /* QuestionViewController.swift in Sources */,
 				1279111125A3577700EE04BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
