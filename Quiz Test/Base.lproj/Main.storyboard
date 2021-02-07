@@ -98,7 +98,7 @@ Unicode: U+1F422, UTF-8: F0 9F 90 A2</string>
         <scene sceneID="AcZ-8D-x31">
             <objects>
                 <viewController id="3dC-9O-uEz" customClass="QuestionViewController" customModule="Quiz_Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0ob-3o-lMF" customClass="Questi">
+                    <view key="view" contentMode="scaleToFill" id="0ob-3o-lMF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -248,7 +248,13 @@ Unicode: U+1F422, UTF-8: F0 9F 90 A2</string>
                             <constraint firstItem="OH9-6F-SMx" firstAttribute="centerY" secondItem="0ob-3o-lMF" secondAttribute="centerY" constant="34" id="yag-kt-bjG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="suv-7N-zHn"/>
+                    <navigationItem key="navigationItem" id="suv-7N-zHn">
+                        <barButtonItem key="rightBarButtonItem" title="DELETE ME" id="dZC-oY-fe7">
+                            <connections>
+                                <segue destination="kbA-1o-au6" kind="show" id="fPf-Jh-pm0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="kbA-1o-au6" kind="show" id="s3d-Gd-auL"/>
                     </connections>
@@ -264,12 +270,43 @@ Unicode: U+1F422, UTF-8: F0 9F 90 A2</string>
                     <view key="view" contentMode="scaleToFill" id="2KU-l6-EOs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-0s-GSz" userLabel="Results Stack View">
+                                <rect key="frame" x="20" y="354.5" width="374" height="133"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2n-qL-Abo">
+                                        <rect key="frame" x="128.5" y="0.0" width="117" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyZ-7W-YER">
+                                        <rect key="frame" x="164" y="110" width="46" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JXE-1P-SSP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JXE-1P-SSP" firstAttribute="trailing" secondItem="cOx-0s-GSz" secondAttribute="trailing" constant="20" id="4om-qO-dek"/>
+                            <constraint firstItem="cOx-0s-GSz" firstAttribute="leading" secondItem="JXE-1P-SSP" secondAttribute="leading" constant="20" id="azf-ye-OvM"/>
+                            <constraint firstItem="cOx-0s-GSz" firstAttribute="centerY" secondItem="2KU-l6-EOs" secondAttribute="centerY" id="g4B-y4-t0Z"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XoL-cs-60o"/>
+                    <navigationItem key="navigationItem" id="XoL-cs-60o">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="c36-0z-jya">
+                            <connections>
+                                <segue destination="qHZ-iM-MUg" kind="unwind" unwindAction="unwind:" id="uYS-7Q-A2q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-p6-Ghu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qHZ-iM-MUg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2757.971014492754" y="93.75"/>
         </scene>
@@ -293,6 +330,9 @@ Unicode: U+1F422, UTF-8: F0 9F 90 A2</string>
             <point key="canvasLocation" x="992.75362318840587" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s3d-Gd-auL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
