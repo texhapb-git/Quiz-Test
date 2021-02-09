@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		12054A5125C167A80016E360 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A5025C167A80016E360 /* QuestionViewController.swift */; };
 		12054A5625CFE80C0016E360 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A5525CFE80C0016E360 /* ResultsViewController.swift */; };
+		12054A5E25D153500016E360 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A5D25D153500016E360 /* Question.swift */; };
+		12054A6125D153F00016E360 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A6025D153F00016E360 /* ResponseType.swift */; };
+		12054A6425D1545C0016E360 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A6325D1545C0016E360 /* Answer.swift */; };
+		12054A6725D154D00016E360 /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12054A6625D154D00016E360 /* AnimalType.swift */; };
 		1279110F25A3577700EE04BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279110E25A3577700EE04BB /* AppDelegate.swift */; };
 		1279111125A3577700EE04BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279111025A3577700EE04BB /* SceneDelegate.swift */; };
 		1279111325A3577700EE04BB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279111225A3577700EE04BB /* WelcomeViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		12054A5025C167A80016E360 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		12054A5525CFE80C0016E360 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		12054A5D25D153500016E360 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		12054A6025D153F00016E360 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		12054A6325D1545C0016E360 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		12054A6625D154D00016E360 /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 		1279110B25A3577700EE04BB /* Quiz Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1279110E25A3577700EE04BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1279111025A3577700EE04BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,37 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		12054A5825D152210016E360 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12054A6625D154D00016E360 /* AnimalType.swift */,
+				12054A6325D1545C0016E360 /* Answer.swift */,
+				12054A5D25D153500016E360 /* Question.swift */,
+				12054A6025D153F00016E360 /* ResponseType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12054A5925D152490016E360 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1279111925A3577A00EE04BB /* LaunchScreen.storyboard */,
+				1279111425A3577700EE04BB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12054A5A25D152730016E360 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1279110E25A3577700EE04BB /* AppDelegate.swift */,
+				1279111725A3577A00EE04BB /* Assets.xcassets */,
+				1279111C25A3577A00EE04BB /* Info.plist */,
+				1279111025A3577700EE04BB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		1279110225A3577700EE04BB = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +109,9 @@
 		1279110D25A3577700EE04BB /* Quiz Test */ = {
 			isa = PBXGroup;
 			children = (
-				1279110E25A3577700EE04BB /* AppDelegate.swift */,
-				1279111725A3577A00EE04BB /* Assets.xcassets */,
-				1279111C25A3577A00EE04BB /* Info.plist */,
-				1279111925A3577A00EE04BB /* LaunchScreen.storyboard */,
-				1279111425A3577700EE04BB /* Main.storyboard */,
-				1279111025A3577700EE04BB /* SceneDelegate.swift */,
+				12054A5A25D152730016E360 /* App */,
+				12054A5825D152210016E360 /* Models */,
+				12054A5925D152490016E360 /* View */,
 				12054A5325C167E00016E360 /* View Controllers */,
 			);
 			path = "Quiz Test";
@@ -154,8 +190,12 @@
 				1279111325A3577700EE04BB /* WelcomeViewController.swift in Sources */,
 				1279110F25A3577700EE04BB /* AppDelegate.swift in Sources */,
 				12054A5125C167A80016E360 /* QuestionViewController.swift in Sources */,
+				12054A5E25D153500016E360 /* Question.swift in Sources */,
 				12054A5625CFE80C0016E360 /* ResultsViewController.swift in Sources */,
 				1279111125A3577700EE04BB /* SceneDelegate.swift in Sources */,
+				12054A6125D153F00016E360 /* ResponseType.swift in Sources */,
+				12054A6425D1545C0016E360 /* Answer.swift in Sources */,
+				12054A6725D154D00016E360 /* AnimalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N46BF4X43P;
-				INFOPLIST_FILE = "Quiz Test/Info.plist";
+				INFOPLIST_FILE = "Quiz Test/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N46BF4X43P;
-				INFOPLIST_FILE = "Quiz Test/Info.plist";
+				INFOPLIST_FILE = "Quiz Test/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
